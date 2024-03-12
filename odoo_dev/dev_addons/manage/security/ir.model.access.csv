@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_manage_cliente,manage.cliente,model_manage_cliente,base.group_user,1,1,1,1
+access_manage_taller,manage.taller,model_manage_taller,base.group_user,1,1,1,1
+access_manage_dietista,manage.dietista,model_manage_dietista,base.group_user,1,1,1,1
+access_manage_dieta,manage.dieta,model_manage_dieta,base.group_user,1,1,1,1
+access_manage_revision,manage.revision,model_manage_revision,base.group_user,1,1,1,1

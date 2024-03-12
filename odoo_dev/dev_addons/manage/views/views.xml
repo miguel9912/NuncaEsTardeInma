@@ -1,0 +1,322 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!-- CLIENTE-->
+
+    <!-- TREE -->
+    <record model="ir.ui.view" id="manage.cliente_list">
+      <field name="name">manage cliente list</field>
+      <field name="model">manage.cliente</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="nif" />
+          <field name="foto" />
+          <field name="motivo" />
+          <field name="especialista" />
+          <field name="dieta"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- FORM -->
+    <record model="ir.ui.view" id="manage.cliente_form">
+      <field name="name">manage cliente form</field>
+      <field name="model">manage.cliente</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="name" />
+            <field name="nif" />
+            <field name="foto" />
+            <field name="motivo" />
+            <field name="especialista" />
+            <field name="dieta"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="manage.action_cliente_window">
+      <field name="name">manage cliente window</field>
+      <field name="res_model">manage.cliente</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+
+
+<!-- TALLER -->
+
+<!-- TREE -->
+<record model="ir.ui.view" id="manage.taller_list">
+  <field name="name">manage taller list</field>
+  <field name="model">manage.taller</field>
+  <field name="arch" type="xml">
+    <tree>
+      <field name="nombre" />
+      <field name="especialista" />
+      <field name="horario" />
+      <field name="link" />
+    </tree>
+  </field>
+</record>
+
+<!-- FORM-->  
+<record model="ir.ui.view" id="manage.taller_form">
+  <field name="name">manage taller form</field>
+  <field name="model">manage.taller</field>
+  <field name="arch" type="xml">
+    <form>
+      <group>
+        <field name="nombre" />
+        <field name="especialista" /> 
+        <field name="horario" />
+        <field name="link" />
+      </group>
+    </form>
+  </field>
+</record>
+
+
+
+<record model="ir.actions.act_window" id="manage.action_taller_window">
+  <field name="name">manage taller window</field>
+  <field name="res_model">manage.taller</field>
+  <field name="view_mode">tree,form</field>
+</record> 
+
+
+
+<!-- DIETISTA -->
+
+<!-- TREE -->
+<record model="ir.ui.view" id="manage.dietista_list">
+  <field name="name">manage dietista list</field>
+  <field name="model">manage.dietista</field>
+  <field name="arch" type="xml">
+    <tree>
+      <field name="nif" />
+      <field name="name" />
+      <field name="foto" />
+      <field name="especialidad" />
+      <field name="taller" />
+      <field name="dieta"/>
+    </tree>
+  </field>
+</record>
+
+<!-- FORM-->  
+<record model="ir.ui.view" id="manage.dietista_form">
+  <field name="name">manage dietista form</field>
+  <field name="model">manage.dietista</field>
+  <field name="arch" type="xml">
+    <form>
+      <group>
+        <field name="nif" />
+        <field name="name" />
+        <field name="foto" />
+        <field name="especialidad" />
+        <field name="taller" />
+        <field name="dieta"/>
+      </group>
+    </form>
+  </field>
+</record>
+
+
+
+<record model="ir.actions.act_window" id="manage.action_dietista_window">
+  <field name="name">manage dietista window</field>
+  <field name="res_model">manage.dietista</field>
+  <field name="view_mode">tree,form</field>
+</record> 
+
+
+
+<!-- DIETA -->
+
+<!-- TREE -->
+<record model="ir.ui.view" id="manage.dieta_list">
+  <field name="name">manage dieta list</field>
+  <field name="model">manage.dieta</field>
+  <field name="arch" type="xml">
+    <tree>
+      <field name="cliente" />
+      <field name="especialista" />
+      <field name="start_date" />
+      <field name="duracion" />
+      <field name="end_date" />
+    </tree>
+  </field>
+</record>
+
+<!-- FORM-->  
+<record model="ir.ui.view" id="manage.dieta_form">
+  <field name="name">manage dieta form</field>
+  <field name="model">manage.dieta</field>
+  <field name="arch" type="xml">
+    <form>
+      <group>
+        <field name="cliente" />
+        <field name="especialista" />
+        <field name="start_date" />
+        <field name="duracion" />
+        <field name="end_date" />
+      </group>
+    </form>
+  </field>
+</record>
+
+
+
+<record model="ir.actions.act_window" id="manage.action_dieta_window">
+  <field name="name">manage dieta window</field>
+  <field name="res_model">manage.dieta</field>
+  <field name="view_mode">tree,form</field>
+</record>
+
+<!-- REVISION -->
+
+<!-- TREE -->
+<record model="ir.ui.view" id="manage.revision_list">
+  <field name="name">manage revision list</field>
+  <field name="model">manage.revision</field>
+  <field name="arch" type="xml">
+    <tree>
+      <field name="horario" />
+      <field name="cliente" />
+      <field name="dieta" />
+    </tree>
+  </field>
+</record>
+
+<!-- FORM-->  
+<record model="ir.ui.view" id="manage.revision_form">
+  <field name="name">manage revision form</field>
+  <field name="model">manage.revision</field>
+  <field name="arch" type="xml">
+    <form>
+      <group>
+        <field name="horario" />
+        <field name="cliente" />
+        <field name="dieta" />
+      </group>
+    </form>
+  </field>
+</record>
+
+
+
+<record model="ir.actions.act_window" id="manage.action_revision_window">
+  <field name="name">manage revision window</field>
+  <field name="res_model">manage.revision</field>
+  <field name="view_mode">tree,form</field>
+</record> 
+
+
+
+
+
+
+
+<!-- DEVELOPER  
+
+  <record model="ir.ui.view" id="manage.devs_partner_form">
+  <field name="name">manage devs form</field>
+  <field name="model">res.partner</field>
+  <field name="inherit_id" ref="base.view_partner_form"></field>
+  <field name="mode">primary</field>
+  <field name="arch" type="xml">
+    <xpath expr="//sheet/notebook/page[@name='internal_notes']" position="after">
+      <page name="devs" string="Devs" attrs="{'invisible':[('is_dev', '=', False)]}">
+        <group>
+          <group>
+            <field name="is_dev" attrs="{'invisible':True}"></field>
+            <field name="access_code"></field>
+            <field name="technologies"></field>
+            <field 
+              name="tasks"
+              context="{'current_developer':active_id}"></field>
+          </group>
+        </group>
+      </page>
+    </xpath>
+  </field>
+</record>
+
+<record model="ir.actions.act_window" id="manage.action_developer_window">
+  <field name="name">manage project window</field>
+  <field name="res_model">res.partner</field>
+  <field name="view_mode">tree,form</field>
+  <field name="domain">[('is_dev', '=', True)]</field>
+  <field name="context">{'default_is_dev':True}</field>
+</record>
+<record model="ir.actions.act_window" id="manage.action_developer_window">
+  <field name="name">manage project window</field>
+  <field name="res_model">res.partner</field>
+  <field name="view_mode">tree,form</field>
+</record>
+
+<record model="ir.actions.act_window" id="manage.action_view_developer_tree">
+  <field name="name">Developer Tree View</field>
+  <field name="view_mode">tree</field>
+  <field name="view_id" ref="base.view_partner_tree"/>
+</record>
+
+
+<record model="ir.actions.act_window" id="manage.action_view_developer_form">
+  <field name="sequence" eval="2" />
+  <field name="view_mode">form</field>
+  <field name="view_id" ref="manage.devs_partner_form" />
+  <field name="act_window_id" ref="manage.action_developer_window" />
+</record>
+
+<record model="ir.ui.view" id="manage.devs_partner_form">
+  <field name="name">manage devs form</field>
+  <field name="model">res.partner</field>
+  <field name="arch" type="xml">
+    <form>
+      <group>
+        <field name="code" />
+      </group>
+    </form>
+  </field>
+</record>  -->
+
+
+
+
+<!-- ACTIONS -->
+<menuitem name="Manage" id="manage.menu_root" />
+<menuitem name="Management" id="manage.menu_1" parent="manage.menu_root" />
+
+
+<menuitem name="Clientes" id="manage.menu_1_cliente_list" parent="manage.menu_1"
+          action="manage.action_cliente_window" />
+
+<menuitem name="Talleres" id="manage.menu_1_taller_list" parent="manage.menu_1" 
+            action="manage.action_taller_window" />
+
+<menuitem name="Dietistas" id="manage.menu_1_dietista_list" parent="manage.menu_1" 
+            action="manage.action_dietista_window" />
+
+<menuitem name="Dietas" id="manage.menu_1_dieta_list" parent="manage.menu_1" 
+            action="manage.action_dieta_window" />
+
+<menuitem name="Revisiones" id="manage.menu_1_revision_list" parent="manage.menu_1" 
+            action="manage.action_revision_window" />
+
+            <!--
+<menuitem name="Devs" id="manage.menu_1_devs_list" parent="manage.menu_1"
+            action="manage.action_developer_window"/>
+
+            
+<menuitem name="Desarrolladores" id="manage.menu_1_developer_list" parent="manage.menu_1" 
+            action="manage.action_developer_window" />  -->
+
+  </data>
+</odoo>
